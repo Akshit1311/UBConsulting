@@ -1,0 +1,53 @@
+.contact-box {
+  background: rgba(255, 255, 255, 0.993);
+
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+
+  border-radius: 1rem;
+  padding: 3rem;
+  /* border: 1px solid rgba(128, 128, 128, 0.726); */
+  box-shadow: 0 0 50px 1px dodgerblue;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 600px) {
+  .contact-box {
+    width: 70%;
+    animation: effect 5s infinite;
+  }
+
+  .contact-box-container {
+    padding: 0 10rem;
+  }
+}
+
+.contact-heading {
+  font-weight: 700;
+}
+
+.contact-box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../../images/contact/contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+@keyframes effect {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.03);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

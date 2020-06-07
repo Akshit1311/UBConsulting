@@ -1,0 +1,21 @@
+footer {
+  /* height: 100px; */
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 3rem 0;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  /* background: red; */
+  margin: 3rem 0;
+}
+
+.footer-icon {
+  margin: 2rem;
+  /* border: 2px solid white; */
+}

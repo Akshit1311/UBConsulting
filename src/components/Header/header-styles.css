@@ -1,0 +1,65 @@
+header {
+  background: rgba(0, 0, 0, 0.947);
+  color: white;
+  padding: 1rem;
+  /* position: sticky; */
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  border: 3px solid rgba(255, 208, 0, 0.959);
+  width: 100px;
+  padding: 0.25rem 1rem;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+a {
+  margin: 0 2rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  color: rgba(255, 208, 0, 0.959);
+}
+
+.active {
+  color: rgba(255, 208, 0, 0.959);
+}
+
+#header-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  #header-links {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
+  a {
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .hamburger {
+    display: none;
+  }
+}

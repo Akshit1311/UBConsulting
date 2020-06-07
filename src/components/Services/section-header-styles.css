@@ -1,0 +1,23 @@
+.section-container {
+  margin: 5rem 0;
+}
+.section-heading {
+  border: 0.4rem solid rgb(255, 196, 3);
+  padding: 0.5rem 1rem;
+}
+
+.section-heading span {
+  font-weight: 700;
+}
+
+.section-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-desc span {
+  font-weight: 700;
+  padding: 0.5rem 3rem;
+  text-align: justify;
+}

@@ -1,0 +1,7 @@
+.preheader {
+  background: rgb(29, 29, 29);
+  height: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+}

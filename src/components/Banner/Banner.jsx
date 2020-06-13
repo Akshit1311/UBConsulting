@@ -14,12 +14,17 @@ function Banner() {
     <div className="banner">
       <Container>
         <h1 className="banner-heading">
-          Suitable for <span>ANY BUSINESS</span>
+          UNLOCK BUSINESS <br /> <span>CONSULTING (UBC)</span>
         </h1>
         <br />
+        <p className="tagline">
+          "Unlock your growth potential with our solutions"
+        </p>
         <Button className="question" variant="outline-light" size="lg">
           <Router forceRefresh>
-            <Link to="/contact">have a question?</Link>
+            <Link className="h-link" to="/contact">
+              have an enquiry ?
+            </Link>
           </Router>
         </Button>
       </Container>

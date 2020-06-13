@@ -9,10 +9,10 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 
 // Styles
-import "./contact-styles.css";
-// import "./background.css";
+import "../Contact/contact-styles.css";
+import "./career-styles.css";
 
-function Contact() {
+function Career() {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -26,10 +26,10 @@ function Contact() {
   };
 
   return (
-    <div className="contact-box-container">
+    <div className="career-box-container">
       <div className="contact-box">
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
-          <h1 className="contact-heading">For Enquiries . . .</h1>
+          <h1 className="contact-heading">Apply . . .</h1>
           <hr />
 
           <br />
@@ -84,26 +84,6 @@ function Contact() {
                   </Form.Control.Feedback>
                 </Form.Group>
               </Row>
-              <Row>
-                <Form.Group
-                  as={Col}
-                  md="12"
-                  controlId="validationCustomPhoneNum"
-                >
-                  <Form.Label>Phone Number</Form.Label>
-                  <InputGroup>
-                    <Form.Control
-                      type="text"
-                      placeholder="PhoneNumber"
-                      aria-describedby="inputGroupPrepend"
-                      required
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Please enter a valid Phone Number.
-                    </Form.Control.Feedback>
-                  </InputGroup>
-                </Form.Group>
-              </Row>
             </Col>
 
             <Col>
@@ -124,14 +104,14 @@ function Contact() {
                   </Form.Control.Feedback>
                 </InputGroup>
               </Form.Group>
-
               <Form.Group as={Col} md="12" controlId="validationCustom03">
-                <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" aria-label="With textarea" />
-
-                <Form.Control.Feedback type="invalid">
-                  Please enter an appropriate message.
-                </Form.Control.Feedback>
+                <Form.Label>CV Upload</Form.Label>
+                <Form.File
+                  id="custom-file-translate-scss"
+                  label="Custom file input"
+                  lang="en"
+                  custom
+                />
               </Form.Group>
             </Col>
           </Form.Row>
@@ -150,4 +130,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Career;

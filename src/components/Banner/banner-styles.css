@@ -5,13 +5,21 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 400px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   box-shadow: 0 10px 30px black;
-  margin-top: 3rem;
+  /* margin-top: 3.5rem; */
+  padding: 2rem 0;
+}
+
+.tagline {
+  font-size: 2rem;
+  font-weight: 700;
+  /* color: rgb(255, 196, 0); */
+  color: white;
 }
 
 .question {
@@ -30,4 +38,14 @@
 .banner-heading span {
   color: rgba(255, 208, 0, 0.959);
   font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    height: 600px;
+  }
+
+  .banner-heading {
+    font-size: 3.5rem;
+  }
 }

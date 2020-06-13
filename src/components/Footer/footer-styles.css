@@ -1,9 +1,37 @@
 footer {
   /* height: 100px; */
-  width: 100%;
+  /* width: 100%; */
   background: black;
   color: white;
-  padding: 3rem 0;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.f-link {
+  color: rgb(231, 199, 19);
+  padding: 0%;
+  margin: 0;
+  font-weight: 700;
+}
+
+.f-link:hover {
+  color: rgb(210, 231, 19);
+}
+
+.f-link-1 {
+  color: white;
+}
+
+.f-link-1:hover {
+  color: rgb(231, 199, 19);
+}
+
+.footer-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 .footer-icons {
@@ -12,10 +40,15 @@ footer {
   justify-content: center;
   height: 100px;
   /* background: red; */
-  margin: 3rem 0;
+  flex-direction: row;
+  /* margin: 3rem 0; */
 }
 
 .footer-icon {
   margin: 2rem;
   /* border: 2px solid white; */
+}
+
+.footer-icon:hover {
+  color: rgb(231, 199, 19);
 }

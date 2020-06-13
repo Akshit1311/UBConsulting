@@ -8,7 +8,7 @@ header {
 }
 
 .logo {
-  border: 3px solid rgba(255, 208, 0, 0.959);
+  /* border: 3px solid rgba(255, 208, 0, 0.959); */
   width: 100px;
   padding: 0.25rem 1rem;
 }
@@ -17,17 +17,39 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
 
-a {
-  margin: 0 2rem;
+.dropdown-con {
+  background-color: black;
+}
+
+.dropdown-item {
+  padding: 0rem !important;
+  margin: 0.5rem 0;
+}
+
+.drop-text {
+  width: 100%;
+  font-size: 1.25rem;
+  padding-right: ;
+  /* background: red; */
+  padding-right: 100%;
+  padding-left: 0.75rem;
+}
+.drop-text:hover {
+  color: black !important;
+}
+
+.h-link {
   color: white;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  /* padding: 0.5rem 1rem; */
+  width: 100%;
+  text-align: center;
 }
 
-a:hover {
+.h-link:hover {
   color: rgba(255, 208, 0, 0.959);
 }
 

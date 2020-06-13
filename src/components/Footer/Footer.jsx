@@ -25,7 +25,7 @@ function Footer() {
     <footer>
       <Container>
         <Row>
-          <Col sm={12} lg={4}>
+          <Col sm={12} lg={3}>
             <div className="footer-icons">
               <FacebookIcon className="footer-icon" fontSize="large" />
               <TwitterIcon className="footer-icon" fontSize="large" />
@@ -35,24 +35,40 @@ function Footer() {
 
           <Col
             sm={{ span: 12, order: "first" }}
-            lg={{ span: 4, order: "last" }}
+            lg={{ span: 6, order: "last" }}
           >
-            <div className="footer-icons">
-              <Col>
-                <h5>Contact US:</h5>
-                <br />
-                <MailIcon />
-                &nbsp; Contact@ubc.com
-                <br />
-                <br />
-                <PhoneIcon />
-                &nbsp; 9313489918
+            {/* <div className="footer-icons"> */}
+            <Row className="footer-icons">
+              <Col className="text-center">
+                <a className="f-link-1" href="mailto:Contact@ubc.com">
+                  <MailIcon />
+                  &nbsp; Contact@ubc.com
+                </a>
               </Col>
-            </div>
+              <Col className="text-center">
+                <a className="f-link-1" href="tel:+91 9313489918">
+                  <PhoneIcon />
+                  &nbsp; 9313489918
+                </a>
+              </Col>
+            </Row>
+            {/* </div> */}
           </Col>
 
-          <Col sm={{ span: 12 }} lg={4}>
-            <div className="footer-icons">© Copyright UBC {currentYear}</div>
+          <Col sm={{ span: 12 }} lg={3}>
+            <div className="footer-sec">
+              © Copyright {currentYear} <br />
+              <span>
+                Designed by &nbsp;
+                <a
+                  className="f-link"
+                  href="https://www.webquanta.in"
+                  target="_blank"
+                >
+                  WebQuanta
+                </a>
+              </span>
+            </div>
           </Col>
         </Row>
       </Container>

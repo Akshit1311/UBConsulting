@@ -9,10 +9,11 @@ function IndexPage() {
   return (
     <div>
       <Banner />
+      <About />
+
       <Services />
       <Quote />
       <WhyUs />
-      <About />
     </div>
   );
 }

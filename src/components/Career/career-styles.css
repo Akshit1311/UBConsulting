@@ -1,0 +1,10 @@
+.career-box-container {
+  background: url(../../images/contact/career.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  height: 100%;
+}

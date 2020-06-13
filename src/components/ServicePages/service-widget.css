@@ -1,0 +1,33 @@
+.service-heading {
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 3rem 0rem;
+  font-weight: 700;
+  /* margin: auto; */
+  margin: 0 4rem;
+  width: 100%;
+}
+
+.serial-num {
+  border: 0.3rem solid rgb(255, 196, 0);
+  padding: 0.4rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  /* width: 200px; */
+}
+
+.service-row {
+  /* display: flex; */
+}
+
+.service-content {
+  display: flex;
+}
+
+.service-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

@@ -11,13 +11,13 @@ function SectionHeader(props) {
   return (
     <div className="section-container">
       <Row>
-        <Col sm={12} lg={6}>
+        <Col sm={12} lg={4}>
           <h1 className="section-heading">
-            {props.preheading} <br />
+            {props.preheading} &nbsp;
             <span>{props.heading}</span>
           </h1>
         </Col>
-        <Col sm={12} lg={6} className="section-desc">
+        <Col sm={12} lg={8} className="section-desc">
           <span>{props.description}</span>
         </Col>
       </Row>

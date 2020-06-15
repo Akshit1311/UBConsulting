@@ -7,49 +7,61 @@ function IndustryExp() {
   const industryexp = [
     {
       id: 1,
-      heading: "FMCG",
+      heading: "Airlines",
     },
     {
       id: 2,
-      heading: "Consumer Electronics",
-    },
-    {
-      id: 3,
-      heading: "Healthcare",
-    },
-    {
-      id: 4,
-      heading: "Pharma",
-    },
-    {
-      id: 5,
       heading: "Automotive",
     },
     {
-      id: 6,
-      heading: "Real Estate",
+      id: 3,
+      heading: "Consumer Electronics",
     },
     {
-      id: 7,
+      id: 4,
+      heading: "FMCG",
+    },
+    {
+      id: 5,
+      heading: "Healthcare",
+    },
+    {
+      id: 6,
       heading: "Hospitality",
     },
     {
-      id: 8,
+      id: 7,
       heading: "Infrastructure",
     },
     {
-      id: 9,
+      id: 8,
       heading: "IT & ITES",
     },
+
+    {
+      id: 9,
+      heading: "Manufacturing",
+    },
+
     {
       id: 10,
+      heading: "Pharma",
+    },
+
+    {
+      id: 11,
+      heading: "Real Estate",
+    },
+
+    {
+      id: 12,
       heading: "Telecom",
     },
   ];
 
   return (
     <div className="service-item">
-      <h1 className="text-center">IndustryExp and Process Outsourcing</h1>
+      <h1 className="text-center">Industry Experience</h1>
       <br />
       <ServiceWidget service={industryexp} />
     </div>

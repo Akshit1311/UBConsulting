@@ -16,7 +16,7 @@ function ServiceWidget(props) {
           <Col sm={12} lg={6}>
             {props.service.map((item, index) => {
               return (
-                index % 2 === 0 && (
+                item.id % 2 !== 0 && (
                   <p key={item.id} className="service-content">
                     <span className="serial-num">{item.id}</span>
                     <h4>{item.heading}</h4>
@@ -26,9 +26,9 @@ function ServiceWidget(props) {
             })}
           </Col>
           <Col sm={12} lg={6}>
-            {props.service.map((item, index) => {
+            {props.service.map((item) => {
               return (
-                index % 2 !== 0 && (
+                item.id % 2 === 0 && (
                   <p key={item.id} className="service-content">
                     <span className="serial-num">{item.id}</span>
                     <h4>{item.heading}</h4>

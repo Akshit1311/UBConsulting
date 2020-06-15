@@ -11,15 +11,15 @@ function Accounting() {
     },
     {
       id: 2,
-      heading: "Procure to Pay",
+      heading: "Accounts Payable",
     },
     {
       id: 3,
-      heading: "Record to Report",
+      heading: "Administration ",
     },
     {
       id: 4,
-      heading: "Accounts Payable",
+      heading: "Loan Staffing ",
     },
     {
       id: 5,
@@ -27,17 +27,18 @@ function Accounting() {
     },
     {
       id: 6,
-      heading: "Administration ",
+      heading: "Procure to Pay",
     },
+
     {
       id: 7,
-      heading: "Loan Staffing ",
+      heading: "Record to Report",
     },
   ];
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Accounting and Process Outsourcing</h1>
+      <h1 className="text-center">Process Outsourcing</h1>
       <br />
       <ServiceWidget service={accounting} />
     </div>

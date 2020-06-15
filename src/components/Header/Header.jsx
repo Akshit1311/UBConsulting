@@ -34,7 +34,7 @@ function Header() {
       <Container className="header-container">
         <Row>
           <Col sm={12} lg={3} className="menu-icons">
-            <img className="logo" src={Logo} />
+            <img className="logo" alt="UBC_logo" src={Logo} />
 
             <span className="hamburger ">
               <MenuIcon fontSize="large" onClick={toggleNav}>
@@ -79,7 +79,7 @@ function Header() {
                       className="text-white drop-text"
                       to="/services/accounting"
                     >
-                      Accounting
+                      Outsourcing
                     </Link>
                   </Dropdown.Item>
                   <Dropdown.Item href="#">
@@ -91,8 +91,11 @@ function Header() {
                     </Link>
                   </Dropdown.Item>
                   <Dropdown.Item href="#">
-                    <Link className="text-white drop-text" to="/services/risk">
-                      Risk
+                    <Link
+                      className="text-white drop-text"
+                      to="/services/governance"
+                    >
+                      GRC
                     </Link>
                   </Dropdown.Item>
                   <Dropdown.Item href="#">
@@ -109,35 +112,35 @@ function Header() {
                     </Link>
                   </Dropdown.Item>
 
-                  <Dropdown.Item href="#">
+                  {/* <Dropdown.Item href="#">
                     <Link
                       className="text-white drop-text"
-                      to="/services/taxation"
+                      to="/services/finance"
                     >
                       Finance
                     </Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#">
+                  </Dropdown.Item> */}
+                  {/* <Dropdown.Item href="#">
                     <Link
                       className="text-white drop-text"
                       to="/services/accounting"
                     >
                       Accounting
                     </Link>
-                  </Dropdown.Item>
+                  </Dropdown.Item> */}
                   <Dropdown.Item href="#">
                     <Link className="text-white drop-text" to="/services/loan">
                       Loan Staffing
                     </Link>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#">
+                  {/* <Dropdown.Item href="#">
                     <Link
                       className="text-white drop-text"
                       to="/services/outsourcing"
                     >
                       Outsourcing
                     </Link>
-                  </Dropdown.Item>
+                  </Dropdown.Item> */}
                   <Dropdown.Item href="#">
                     <Link
                       className="text-white drop-text"
@@ -146,22 +149,15 @@ function Header() {
                       Startup
                     </Link>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#">
-                    <Link
-                      className="text-white drop-text"
-                      to="/services/business"
-                    >
-                      Business
-                    </Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#">
+                  {/* s */}
+                  {/* <Dropdown.Item href="#">
                     <Link
                       className="text-white drop-text"
                       to="/services/advisory"
                     >
                       Other Services
                     </Link>
-                  </Dropdown.Item>
+                  </Dropdown.Item> */}
                 </Dropdown.Menu>
               </Dropdown>
 

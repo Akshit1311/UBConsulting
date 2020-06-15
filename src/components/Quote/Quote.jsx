@@ -9,6 +9,9 @@ import Col from "react-bootstrap/Col";
 // Styles
 import "./quote-styles.css";
 
+// Routing
+import { Link, BrowserRouter as Router } from "react-router-dom";
+
 function Quote() {
   return (
     <div className="quote">
@@ -18,9 +21,13 @@ function Quote() {
             <h3>Looking For a High-Class Financial Service ?</h3>
           </Col>
           <Col lg={3}>
-            <Button className="quote-btn" size="md" variant="dark">
-              GET A FREE QUOTE
-            </Button>
+            <Router forceRefresh>
+              <Link to="/contact">
+                <Button className="quote-btn" size="md" variant="dark">
+                  GET A FREE QUOTE
+                </Button>
+              </Link>
+            </Router>
           </Col>
         </Row>
       </Container>

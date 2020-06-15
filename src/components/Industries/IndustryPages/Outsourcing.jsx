@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceWidget from "../../ServicePages/ServiceWidget";
+// import ServiceWidget from "../../ServicePages/ServiceWidget";
 
 import "../../ServicePages/service-item.css";
 import Container from "react-bootstrap/Container";

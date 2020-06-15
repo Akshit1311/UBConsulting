@@ -8,37 +8,6 @@ function Taxation() {
   const taxation = [
     {
       id: 1,
-      heading: "Financial Statements",
-    },
-    {
-      id: 2,
-      heading: "Bookkeeping ",
-    },
-    {
-      id: 3,
-      heading: "Cash flow projections ",
-    },
-    {
-      id: 4,
-      heading: "Virtual CFO",
-    },
-    {
-      id: 5,
-      heading: "Corporate/commodity tax planning",
-    },
-    {
-      id: 6,
-      heading: "Payroll",
-    },
-    {
-      id: 7,
-      heading: "Indirect tax",
-    },
-  ];
-
-  const taxation1 = [
-    {
-      id: 1,
       heading: "Management charts",
     },
     {
@@ -73,11 +42,10 @@ function Taxation() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Taxation and Process Outsourcing</h1>
+      <h1 className="text-center">Finance</h1>
       <br />
+      {/* <br /> */}
 
-      <ServiceWidget service={taxation} />
-      <br />
       <Container>
         Your start-up is up and running, and you want to make progress but have
         limited resources. To help you with specific challenges, UBC offers a
@@ -87,7 +55,7 @@ function Taxation() {
       </Container>
       <br />
 
-      <ServiceWidget service={taxation1} />
+      <ServiceWidget service={taxation} />
       <br />
 
       <Container>

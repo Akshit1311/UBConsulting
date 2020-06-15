@@ -7,11 +7,11 @@ function Assurance() {
   const assurance = [
     {
       id: 1,
-      heading: "Develop accounting manual",
+      heading: "Accounting advisory",
     },
     {
       id: 2,
-      heading: "Accounting advisory",
+      heading: "Develop accounting manual",
     },
   ];
 

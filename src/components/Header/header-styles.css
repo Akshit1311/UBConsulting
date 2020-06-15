@@ -31,7 +31,7 @@ header {
 .drop-text {
   width: 100%;
   font-size: 1.25rem;
-  padding-right: ;
+  /* padding-right: ; */
   /* background: red; */
   padding-right: 100%;
   padding-left: 0.75rem;
@@ -83,5 +83,8 @@ header {
 @media screen and (min-width: 600px) {
   .hamburger {
     display: none;
+  }
+  .logo {
+    width: 125px;
   }
 }

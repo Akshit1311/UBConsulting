@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header/Header";
-import PreHeader from "./Header/PreHeader/PreHeader";
+// import PreHeader from "./Header/PreHeader/PreHeader";
 import IndexPage from "./Index";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Contact from "./Contact/Contact";
@@ -44,7 +44,7 @@ function App() {
         <Route exact path="/services/industry-exp" component={IndustryExp} />
         <Route exact path="/services/startup" component={Startup} />
         <Route exact path="/services/business" component={Business} />
-        <Route exact path="/services/taxation" component={Taxation} />
+        <Route exact path="/services/finance" component={Taxation} />
         <Route exact path="/services/loan" component={Loan} />
         <Route exact path="/services/outsourcing" component={Outsourcing} />
 

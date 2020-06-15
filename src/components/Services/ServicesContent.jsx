@@ -13,14 +13,14 @@ import Risk from "../../images/services/risk.jpg";
 import Tax from "../../images/services/tax.jpg";
 import Assurance from "../../images/services/assurance.jpg";
 import It from "../../images/services/it.jpg";
-import Industry from "../../images/industries/industry.jpg";
+// import Industry from "../../images/industries/industry.jpg";
 import Startup from "../../images/industries/startup.jpg";
 import Business from "../../images/industries/business.jpg";
 import Loan from "../../images/industries/loan.jpg";
 import Outsourcing from "../../images/industries/outsourcing.jpg";
 
 // linking
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ServicesContent() {
   return (

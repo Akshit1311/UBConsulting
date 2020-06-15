@@ -11,12 +11,12 @@
   justify-content: center;
   flex-direction: column;
   box-shadow: 0 10px 30px black;
-  /* margin-top: 3.5rem; */
+  margin-top: 1rem;
   padding: 2rem 0;
 }
 
 .tagline {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   /* color: rgb(255, 196, 0); */
   color: white;
@@ -31,7 +31,7 @@
 
 .banner-heading {
   color: white;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 900;
 }
 
@@ -46,6 +46,10 @@
   }
 
   .banner-heading {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
   }
 }

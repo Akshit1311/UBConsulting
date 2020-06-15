@@ -9,9 +9,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 // Icons
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
+// import FacebookIcon from "@material-ui/icons/Facebook";
+// import TwitterIcon from "@material-ui/icons/Twitter";
+// import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MailIcon from "@material-ui/icons/Mail";
 import PhoneIcon from "@material-ui/icons/Phone";
 
@@ -25,17 +25,17 @@ function Footer() {
     <footer>
       <Container>
         <Row>
-          <Col sm={12} lg={3}>
+          {/* <Col sm={12} lg={3}>
             <div className="footer-icons">
               <FacebookIcon className="footer-icon" fontSize="large" />
               <TwitterIcon className="footer-icon" fontSize="large" />
               <LinkedInIcon className="footer-icon" fontSize="large" />
             </div>
-          </Col>
+          </Col> */}
 
           <Col
             sm={{ span: 12, order: "first" }}
-            lg={{ span: 6, order: "last" }}
+            lg={{ span: 8, order: "last" }}
           >
             {/* <div className="footer-icons"> */}
             <Row className="footer-icons">
@@ -55,7 +55,7 @@ function Footer() {
             {/* </div> */}
           </Col>
 
-          <Col sm={{ span: 12 }} lg={3}>
+          <Col sm={{ span: 12 }} lg={4}>
             <div className="footer-sec">
               © Copyright {currentYear} <br />
               <span>

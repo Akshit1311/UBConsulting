@@ -5,6 +5,8 @@ footer {
   color: white;
   padding: 0.5rem 0;
   width: 100%;
+  /* position: absolute;
+  bottom: 0; */
 }
 
 .f-link {

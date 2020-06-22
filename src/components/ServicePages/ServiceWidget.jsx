@@ -8,11 +8,27 @@ import Container from "react-bootstrap/Container";
 import "./service-widget.css";
 
 function ServiceWidget(props) {
+  let len = props.service.length;
+  // alert(len);
+
   return (
     // <Row>
     <Container>
       <div className="service-heading-container">
         <Row>
+          {props.service.map((item) => {
+            return (
+              <Col key={item.id} lg={len > 6 ? 4 : 6} sm={12}>
+                <p className="service-content">
+                  <span className="serial-num">{item.id}</span>
+                  <h4>{item.heading}</h4>
+                </p>
+              </Col>
+            );
+          })}
+        </Row>
+
+        {/* <Row>
           <Col sm={12} lg={6}>
             {props.service.map((item, index) => {
               return (
@@ -37,7 +53,7 @@ function ServiceWidget(props) {
               );
             })}
           </Col>
-        </Row>
+        </Row> */}
       </div>
     </Container>
   );

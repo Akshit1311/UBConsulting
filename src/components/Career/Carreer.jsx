@@ -12,7 +12,29 @@ import Button from "react-bootstrap/Button";
 import "../Contact/contact-styles.css";
 import "./career-styles.css";
 
+// Email JS
+import emailjs from "emailjs-com";
+
 function Career() {
+  const [form, setForm] = useState({
+    fname: "",
+    lname: "",
+    city: "",
+    country: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -20,9 +42,29 @@ function Career() {
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
+    } else {
+      sendEmail();
+      event.preventDefault();
+      alert("Your application has been sent!");
     }
 
     setValidated(true);
+  };
+
+  const sendEmail = () => {
+    const templateId = "application";
+    const templateParams = form;
+
+    emailjs
+      .send("gmail", templateId, templateParams, "user_3M6dBzMyG5xfYAuyGQnT9")
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
   };
 
   return (
@@ -48,7 +90,8 @@ function Career() {
                     required
                     type="text"
                     placeholder="First name"
-                    defaultValue="Mark"
+                    name="fname"
+                    onChange={handleChange}
                   />
                   <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
@@ -63,27 +106,44 @@ function Career() {
                     required
                     type="text"
                     placeholder="Last name"
-                    defaultValue="Otto"
+                    name="lname"
+                    onChange={handleChange}
                   />
                   <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
               </Row>
+              <br />
+              <br />
               <Row>
                 <Form.Group as={Col} md="6" controlId="validationCustom03">
                   <Form.Label>City</Form.Label>
-                  <Form.Control type="text" placeholder="City" required />
+                  <Form.Control
+                    type="text"
+                    placeholder="City"
+                    name="city"
+                    onChange={handleChange}
+                    required
+                  />
                   <Form.Control.Feedback type="invalid">
                     Please provide a valid city.
                   </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} md="6" controlId="validationCustom03">
                   <Form.Label>Country</Form.Label>
-                  <Form.Control type="text" placeholder="Country" required />
+                  <Form.Control
+                    type="text"
+                    placeholder="Country"
+                    name="country"
+                    onChange={handleChange}
+                    required
+                  />
                   <Form.Control.Feedback type="invalid">
                     Please provide a valid Country.
                   </Form.Control.Feedback>
                 </Form.Group>
               </Row>
+              <br />
+              <br />
             </Col>
 
             <Col>
@@ -97,6 +157,8 @@ function Career() {
                     type="text"
                     placeholder="Email"
                     aria-describedby="inputGroupPrepend"
+                    name="email"
+                    onChange={handleChange}
                     required
                   />
                   <Form.Control.Feedback type="invalid">
@@ -104,6 +166,9 @@ function Career() {
                   </Form.Control.Feedback>
                 </InputGroup>
               </Form.Group>
+              <br />
+              <br />
+
               <Form.Group as={Col} md="12" controlId="validationCustom03">
                 <Form.Label>CV Upload</Form.Label>
                 <Form.File

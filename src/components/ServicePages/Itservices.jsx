@@ -10,11 +10,11 @@ function ItServices() {
   const advisory = [
     {
       id: 1,
-      heading: "IT Contract Reviews",
+      heading: "IT Contracts ",
     },
     {
       id: 2,
-      heading: "ERP check & assessment",
+      heading: "ERP Assessment",
     },
     {
       id: 3,
@@ -30,29 +30,27 @@ function ItServices() {
     },
     {
       id: 6,
-      heading: "Sourcing & Supply Chain Issues",
+      heading: "Sourcing & Supply Chain",
     },
     {
       id: 7,
-      heading: "ISO 27001 Gap Analysis",
+      heading: "Information Securtiy Audits",
+    },
+    {
+      id: 8,
+      heading: "ITGC",
+    },
+    {
+      id: 9,
+      heading: "IT and Cyber Security",
     },
 
     {
-      id: 8,
+      id: 10,
       heading: "System Integration",
     },
   ];
 
-  const audits = [
-    {
-      id: 1,
-      heading: "ITGC",
-    },
-    {
-      id: 2,
-      heading: "IT and Cyber Security",
-    },
-  ];
   const webdev = [
     {
       id: 1,
@@ -66,18 +64,16 @@ function ItServices() {
       id: 3,
       heading: "Work Flow ",
     },
-  ];
-  const mobapp = [
     {
-      id: 1,
+      id: 4,
       heading: "Android",
     },
     {
-      id: 2,
+      id: 5,
       heading: "IOS",
     },
     {
-      id: 3,
+      id: 6,
       heading: "Hybrid ",
     },
   ];
@@ -118,7 +114,7 @@ function ItServices() {
       <h1 className="text-center">IT Services</h1>
       <br />
       <Container>
-        <h2>IT Consultancy</h2>
+        {/* <h2>IT Consultancy</h2> */}
         <br />
         <Row>
           <Col>
@@ -131,26 +127,17 @@ function ItServices() {
         </Row>
         <br />
         <br />
-        <Row>
-          <Col>
-            <h3 className="text-center">Audits</h3>
-            <br />
-            <ServiceWidget service={audits} />
-          </Col>
-        </Row>
       </Container>
 
-      <br />
-      <br />
-      <br />
-      <br />
-
       <Container>
-        <h2>Application Development</h2>
+        {/* <h2>Application Development</h2> */}
         <br />
         <Row>
           <Col>
-            <h3 className="text-center">Web Application Development</h3>
+            <h3 className="text-center">
+              Web and Mobile Application Development
+            </h3>
+            <br />
             <br />
             <div className="mx-auto d-block">
               <Row>
@@ -170,37 +157,16 @@ function ItServices() {
         </Row>
         <br />
         <br />
-        <Row>
-          <Col>
-            <h3 className="text-center">Mobile Applications</h3>
-            <br />
-            {/* <ServiceWidget service={mobapp} /> */}
-            <Row>
-              {mobapp.map((item) => {
-                return (
-                  <Col lg={4} key={item.id}>
-                    <p className="service-content">
-                      <span className="serial-num">{item.id}</span>
-                      <h4>{item.heading}</h4>
-                    </p>
-                  </Col>
-                );
-              })}
-            </Row>
-          </Col>
-        </Row>
       </Container>
-      <br />
-      <br />
       <br />
       <br />
 
       <Container>
-        <h2>Corporate Training</h2>
+        {/* <h2>Corporate Training</h2> */}
         <br />
         <Row>
           <Col>
-            <h3 className="text-center">Web Development Courses</h3>
+            <h3 className="text-center">Corporate Training</h3>
             <br />
             <div className="mx-auto d-block">
               <ServiceWidget service={corptrain} />

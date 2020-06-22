@@ -2,7 +2,12 @@ import React from "react";
 import Header from "./Header/Header";
 // import PreHeader from "./Header/PreHeader/PreHeader";
 import IndexPage from "./Index";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {
+  Switch,
+  Redirect,
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
 import Contact from "./Contact/Contact";
 import About from "./About/About";
 import Industries from "./Industries/Industries";
@@ -10,6 +15,9 @@ import Services from "./Services/Services";
 import Footer from "./Footer/Footer";
 
 import "./styles.css";
+
+// 404
+import PageNotFound from "./PageNotFound";
 
 // Services
 import Advisory from "./ServicePages/Advisory";
@@ -36,25 +44,33 @@ function App() {
       <div className="offset"></div>
 
       <Router forceRefresh>
-        <Route exact path="/" component={IndexPage} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/career" component={Career} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/industries" component={Industries} />
-        <Route exact path="/services/industry-exp" component={IndustryExp} />
-        <Route exact path="/services/startup" component={Startup} />
-        <Route exact path="/services/business" component={Business} />
-        <Route exact path="/services/finance" component={Taxation} />
-        <Route exact path="/services/loan" component={Loan} />
-        <Route exact path="/services/outsourcing" component={Outsourcing} />
+        <Switch>
+          <Route exact path="/" component={IndexPage} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/career" component={Career} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/industries" component={Industries} />
+          <Route exact path="/services/industry-exp" component={IndustryExp} />
+          <Route exact path="/services/startup" component={Startup} />
+          {/* <Route exact path="/services/business" component={Business} /> */}
+          <Route exact path="/services/finance" component={Taxation} />
+          <Route exact path="/services/loan" component={Loan} />
+          <Route exact path="/services/outsourcing" component={Outsourcing} />
 
-        <Route exact path="/services" component={Services} />
-        <Route exact path="/services/advisory" component={Advisory} />
-        <Route exact path="/services/accounting" component={Accounting} />
-        <Route exact path="/services/governance" component={Governance} />
-        <Route exact path="/services/tax" component={Tax} />
-        <Route exact path="/services/assurance" component={Assurance} />
-        <Route exact path="/services/itservices" component={ItServices} />
+          <Route exact path="/services" component={Services} />
+          <Route exact path="/services/advisory" component={Advisory} />
+          <Route exact path="/services/accounting" component={Accounting} />
+          <Route exact path="/services/governance" component={Governance} />
+          <Route exact path="/services/tax" component={Tax} />
+          <Route exact path="/services/assurance" component={Assurance} />
+          <Route exact path="/services/itservices" component={ItServices} />
+
+          <Route path="/404" component={PageNotFound} />
+          <Route exact path="/" component={IndexPage} />
+          <Route path="*" component={PageNotFound} />
+          {/* <Route path="/*" component={PageNotFound} /> */}
+          <Redirect to="/404" />
+        </Switch>
       </Router>
 
       <Footer />

@@ -73,7 +73,7 @@ function ServicesContent() {
         </Col>
         <Col sm={12} lg={4}>
           <Link className="text-dark" to="/services/loan">
-            <Card link={Loan} heading="Loan Staffing" />
+            <Card link={Business} heading="Loan Staffing" />
           </Link>
         </Col>
         <Col sm={12} lg={4}>
@@ -92,11 +92,11 @@ function ServicesContent() {
           </Link>
         </Col>
 
-        <Col sm={12} lg={4}>
+        {/* <Col sm={12} lg={4}>
           <Link className="text-dark" to="/services/business">
             <Card link={Business} heading="Business Planning" />
           </Link>
-        </Col>
+        </Col> */}
       </Row>
     </div>
   );

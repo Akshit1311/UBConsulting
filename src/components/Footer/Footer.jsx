@@ -21,6 +21,9 @@ function Footer() {
   const date = new Date();
   const currentYear = date.getFullYear();
 
+  const email = "apurva.gupta@ubc.in";
+  const phone = "+91 9313489918";
+
   return (
     <footer>
       <Container>
@@ -40,15 +43,16 @@ function Footer() {
             {/* <div className="footer-icons"> */}
             <Row className="footer-icons">
               <Col className="text-center">
-                <a className="f-link-1" href="mailto:Contact@ubc.com">
+                <a className="f-link-1" href={"mailto:" + email}>
                   <MailIcon />
-                  &nbsp; Contact@ubc.com
+                  &nbsp; {email}
+                  {/* &nbsp; Contact@ubc.com */}
                 </a>
               </Col>
               <Col className="text-center">
-                <a className="f-link-1" href="tel:+91 9313489918">
+                <a className="f-link-1" href={"tel:" + phone}>
                   <PhoneIcon />
-                  &nbsp; 9313489918
+                  &nbsp;+91 9313 489 918
                 </a>
               </Col>
             </Row>

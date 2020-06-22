@@ -12,7 +12,45 @@ import Button from "react-bootstrap/Button";
 import "./contact-styles.css";
 // import "./background.css";
 
+// Email JS
+import emailjs from "emailjs-com";
+
 function Contact() {
+  const [form, setForm] = useState({
+    fname: "",
+    lname: "",
+    city: "",
+    country: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const sendEmail = () => {
+    const templateId = "template_pj2Qwtal";
+    const templateParams = form;
+
+    emailjs
+      .send("gmail", templateId, templateParams, "user_3M6dBzMyG5xfYAuyGQnT9")
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
+  };
+
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -20,7 +58,13 @@ function Contact() {
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
+    } else {
+      sendEmail();
+      event.preventDefault();
+      alert("Your message has been sent!");
     }
+
+    // event.preventDefault();
 
     setValidated(true);
   };
@@ -48,7 +92,9 @@ function Contact() {
                     required
                     type="text"
                     placeholder="First name"
-                    defaultValue="Mark"
+                    name="fname"
+                    onChange={handleChange}
+                    defaultValue={form.fname}
                   />
                   <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
@@ -63,7 +109,9 @@ function Contact() {
                     required
                     type="text"
                     placeholder="Last name"
-                    defaultValue="Otto"
+                    name="lname"
+                    onChange={handleChange}
+                    // defaultValue="Otto"
                   />
                   <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
@@ -71,14 +119,26 @@ function Contact() {
               <Row>
                 <Form.Group as={Col} md="6" controlId="validationCustom03">
                   <Form.Label>City</Form.Label>
-                  <Form.Control type="text" placeholder="City" required />
+                  <Form.Control
+                    type="text"
+                    placeholder="City"
+                    name="city"
+                    onChange={handleChange}
+                    required
+                  />
                   <Form.Control.Feedback type="invalid">
                     Please provide a valid city.
                   </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} md="6" controlId="validationCustom03">
                   <Form.Label>Country</Form.Label>
-                  <Form.Control type="text" placeholder="Country" required />
+                  <Form.Control
+                    type="text"
+                    placeholder="Country"
+                    name="country"
+                    onChange={handleChange}
+                    required
+                  />
                   <Form.Control.Feedback type="invalid">
                     Please provide a valid Country.
                   </Form.Control.Feedback>
@@ -96,6 +156,8 @@ function Contact() {
                       type="text"
                       placeholder="PhoneNumber"
                       aria-describedby="inputGroupPrepend"
+                      name="phone"
+                      onChange={handleChange}
                       required
                     />
                     <Form.Control.Feedback type="invalid">
@@ -117,6 +179,8 @@ function Contact() {
                     type="text"
                     placeholder="Email"
                     aria-describedby="inputGroupPrepend"
+                    name="email"
+                    onChange={handleChange}
                     required
                   />
                   <Form.Control.Feedback type="invalid">
@@ -127,7 +191,12 @@ function Contact() {
 
               <Form.Group as={Col} md="12" controlId="validationCustom03">
                 <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" aria-label="With textarea" />
+                <Form.Control
+                  as="textarea"
+                  aria-label="With textarea"
+                  name="message"
+                  onChange={handleChange}
+                />
 
                 <Form.Control.Feedback type="invalid">
                   Please enter an appropriate message.

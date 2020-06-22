@@ -11,9 +11,7 @@ function Services() {
       <SectionHeader
         preheading="OUR"
         heading="SERVICES"
-        description="UBC is truly an Indian Consulting firm with global ambition, having
-strong team of 100+ professionals with diverse skills, having proven
-capabilities of solving complex challenges of the clients."
+        description="Our experts are passionate in servicing global and domestic clients and truly believe in developing tailor-made solutions for unique challenges. Blueprint of our services is mentioned below: "
       />
       <ServicesContent />
     </Container>

@@ -1,0 +1,40 @@
+.not-found-container {
+  /* background: rgb(255, 196, 0); */
+  background-image: linear-gradient(to bottom right, rgb(255, 166, 0), yellow);
+
+  height: 600px;
+  padding: 6rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.not-found-box {
+  height: 400px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 0.5rem solid rgba(37, 37, 37, 0.973);
+
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.home-btn {
+  border-radius: 1.5rem;
+  padding: 0.5rem 2rem;
+}
+
+.not-found-outer {
+  background-color: white;
+  padding: 1rem;
+}
+
+.not-found-box h1 {
+  font-size: 8rem;
+}
+.not-found-box h4 {
+  font-size: 2rem;
+}

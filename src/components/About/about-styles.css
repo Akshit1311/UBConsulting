@@ -8,6 +8,7 @@
 
 .about-content {
   padding: 5rem 2rem;
+  text-align: justify;
 }
 
 @media screen and (min-width: 600px) {
@@ -36,6 +37,6 @@ body {
 
 #about {
   background: rgb(22, 22, 22);
-  margin: 5rem 0;
+  /* margin: 5rem 0; */
   padding: 0;
 }

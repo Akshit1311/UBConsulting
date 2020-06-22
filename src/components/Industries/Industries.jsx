@@ -25,12 +25,10 @@ function Industries() {
         <SectionHeader
           preheading=""
           heading="INDUSTRIES"
-          description="UBC is truly an Indian Consulting firm with global ambition, having
-strong team of 100+ professionals with diverse skills, having proven
-capabilities of solving complex challenges of the clients."
+          description="Our team at UBC has experience in serving diverse sectors below and leverage learnings across sectors. We update our sector knowledge-base on a periodic basis to provide expert solutions which are 'tried and tested' "
         />
 
-        <br />
+        {/* <br /> */}
       </Container>
       <IndustryExp />
     </div>

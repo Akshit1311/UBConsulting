@@ -22,6 +22,10 @@
   color: white;
 }
 
+.enquiry-text:hover {
+  color: black !important;
+}
+
 .question {
   margin-top: 3rem;
   letter-spacing: 0.3rem;

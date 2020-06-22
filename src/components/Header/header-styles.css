@@ -30,7 +30,7 @@ header {
 
 .drop-text {
   width: 100%;
-  font-size: 1.25rem;
+  font-size: 1rem;
   /* padding-right: ; */
   /* background: red; */
   padding-right: 100%;
@@ -51,6 +51,7 @@ header {
 
 .h-link:hover {
   color: rgba(255, 208, 0, 0.959);
+  text-decoration: none;
 }
 
 .active {

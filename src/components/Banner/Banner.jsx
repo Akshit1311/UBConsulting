@@ -20,13 +20,13 @@ function Banner() {
         <p className="tagline">
           "Unlock your growth potential with our solutions"
         </p>
-        <Button className="question" variant="outline-light" size="lg">
-          <Router forceRefresh>
-            <Link className="h-link" to="/contact">
+        <Router forceRefresh>
+          <Link className="text-white enquiry-text" to="/contact">
+            <Button className="question" variant="outline-light" size="lg">
               have an enquiry ?
-            </Link>
-          </Router>
-        </Button>
+            </Button>
+          </Link>
+        </Router>
       </Container>
     </div>
   );

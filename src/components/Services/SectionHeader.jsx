@@ -12,7 +12,7 @@ function SectionHeader(props) {
     <div className="section-container">
       <Row>
         <Col sm={12} lg={4}>
-          <h1 className="section-heading">
+          <h1 className="section-heading text-center">
             {props.preheading} &nbsp;
             <span>{props.heading}</span>
           </h1>

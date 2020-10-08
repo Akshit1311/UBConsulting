@@ -17,8 +17,8 @@ function Assurance() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Assurance</h1>
-      <br />
+      <h1 className="text-center serv-heading">Assurance</h1>
+      {/* <br /> */}
       <ServiceWidget service={assurance} />
     </div>
   );

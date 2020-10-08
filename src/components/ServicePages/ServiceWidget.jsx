@@ -19,17 +19,19 @@ function ServiceWidget(props) {
           {props.service.map((item) => {
             return (
               <Col key={item.id} lg={len > 6 ? 4 : 6} sm={12}>
-                <p className="service-content">
-                  <span className="serial-num">{item.id}</span>
+                <div className="service-content">
+                  <span className="serial-box">
+                    <span className="serial-num">{item.id}</span>
+                  </span>
                   <h4>{item.heading}</h4>
-                </p>
+                </div>
               </Col>
             );
           })}
         </Row>
 
         {/* <Row>
-          <Col sm={12} lg={6}>
+          <Col sm={12} lg={6}> 
             {props.service.map((item, index) => {
               return (
                 item.id % 2 !== 0 && (

@@ -19,7 +19,7 @@ function WhyUs(props) {
         <div className="section-container">
           <Row>
             <Col sm={12} lg={3}>
-              <h1 className="pl-4 ml-2 section-heading text-center">
+              <h1 className=" ml-2 section-heading why-heading text-center">
                 WHY &nbsp;
                 <span>US</span>
               </h1>
@@ -31,10 +31,10 @@ function WhyUs(props) {
 
           <div className="reasons">
             <Row>
-              {reasons.map((reason) => {
+              {reasons.map((reason, index) => {
                 return (
                   reason.id < 3 && (
-                    <Col sm={12} lg={4}>
+                    <Col sm={12} lg={4} key={index}>
                       <ReasonBox
                         heading={reason.heading}
                         content={reason.content}
@@ -46,10 +46,10 @@ function WhyUs(props) {
             </Row>
             <Row>
               <Col lg={2}></Col>
-              {reasons.map((reason) => {
+              {reasons.map((reason, index) => {
                 return (
                   reason.id > 2 && (
-                    <Col sm={12} lg={4}>
+                    <Col sm={12} lg={4} key={index}>
                       <ReasonBox
                         heading={reason.heading}
                         content={reason.content}

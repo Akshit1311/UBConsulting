@@ -61,7 +61,7 @@ function IndustryExp() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Industry Experience</h1>
+      <h2 className="text-center serv-heading">Industry Experience</h2>
       <br />
       <ServiceWidget service={industryexp} />
     </div>

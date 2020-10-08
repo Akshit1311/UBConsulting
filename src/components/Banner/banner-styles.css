@@ -1,6 +1,6 @@
 .banner {
   background: linear-gradient(rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.452)),
-    url("../../images/Working-Space.gif");
+    url("../../images/Working-Space.PNG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11,8 +11,8 @@
   justify-content: center;
   flex-direction: column;
   box-shadow: 0 10px 30px black;
-  margin-top: 1rem;
-  padding: 2rem 0;
+  margin-top: -1rem;
+  /* padding: 2rem 0; */
 }
 
 .tagline {

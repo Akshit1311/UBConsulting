@@ -2,6 +2,7 @@
   width: 100%;
   height: 250px;
   border-radius: 0.5rem;
+  box-shadow: 0 0 30px 1px gray;
 }
 
 .card-img:hover {

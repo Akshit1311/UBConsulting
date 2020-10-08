@@ -28,7 +28,7 @@ import Assurance from "./ServicePages/Assurance";
 import ItServices from "./ServicePages/Itservices";
 import IndustryExp from "./Industries/IndustryPages/IndustryExp";
 import Startup from "./Industries/IndustryPages/Startup";
-import Business from "./Industries/IndustryPages/Business";
+// import Business from "./Industries/IndustryPages/Business";
 import Taxation from "./Industries/IndustryPages/Taxation";
 import Loan from "./Industries/IndustryPages/Loan";
 import Outsourcing from "./Industries/IndustryPages/Outsourcing";

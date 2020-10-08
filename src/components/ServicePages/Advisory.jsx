@@ -45,7 +45,7 @@ function Advisory() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Other Advisory Services</h1>
+      <h1 className="text-center serv-heading">Other Advisory Services</h1>
       <br />
       <ServiceWidget service={advisory} />
     </div>

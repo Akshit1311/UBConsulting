@@ -2,7 +2,8 @@
   height: 320px;
   background-image: linear-gradient(to bottom right, rgb(255, 166, 0), yellow);
 
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   padding: 2rem 2rem;
   text-align: center;
   box-shadow: 10px 0px 30px 0 rgba(0, 0, 0, 0.336);

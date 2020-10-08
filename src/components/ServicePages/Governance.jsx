@@ -6,27 +6,27 @@ import "./service-item.css";
 function Governance() {
   const governance = [
     {
-      id: 3,
+      id: 1,
       heading: "Compliance Management ",
     },
     {
-      id: 4,
+      id: 2,
       heading: "Enterprise Risk Management",
     },
     {
-      id: 2,
+      id: 3,
       heading: "Forensics",
     },
     {
-      id: 1,
+      id: 4,
       heading: "Internal Audit (Co-source/Outsource)",
     },
     {
-      id: 6,
+      id: 5,
       heading: "Internal Financial Controls ",
     },
     {
-      id: 5,
+      id: 6,
       heading: "Standard Operating Procedures (SOPs)",
     },
     {
@@ -45,7 +45,9 @@ function Governance() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Governance, Risk And Compliance</h1>
+      <h1 className="text-center serv-heading">
+        Governance, Risk And Compliance
+      </h1>
       <br />
       <ServiceWidget service={governance} />
     </div>

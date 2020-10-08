@@ -42,7 +42,7 @@ function Taxation() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Finance</h1>
+      <h1 className="text-center serv-heading">Finance</h1>
       <br />
       {/* <br /> */}
 

@@ -38,7 +38,7 @@ function Accounting() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Process Outsourcing</h1>
+      <h1 className="text-center serv-heading">Process Outsourcing</h1>
       <br />
       <ServiceWidget service={accounting} />
     </div>

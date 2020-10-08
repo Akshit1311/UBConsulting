@@ -21,21 +21,13 @@ function Footer() {
   const date = new Date();
   const currentYear = date.getFullYear();
 
-  const email = "apurva.gupta@ubc.in";
+  const email = "info@ubconsulting.in";
   const phone = "+91 9313489918";
 
   return (
     <footer>
       <Container>
         <Row>
-          {/* <Col sm={12} lg={3}>
-            <div className="footer-icons">
-              <FacebookIcon className="footer-icon" fontSize="large" />
-              <TwitterIcon className="footer-icon" fontSize="large" />
-              <LinkedInIcon className="footer-icon" fontSize="large" />
-            </div>
-          </Col> */}
-
           <Col
             sm={{ span: 12, order: "first" }}
             lg={{ span: 8, order: "last" }}

@@ -70,6 +70,10 @@ header {
   justify-content: space-between;
 }
 
+.droppy-mob {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   #header-links {
     flex-direction: column;
@@ -78,6 +82,13 @@ header {
 
   a {
     margin: 1rem 0;
+  }
+
+  .droppy-desk {
+    display: none;
+  }
+  .droppy-mob {
+    display: block;
   }
 }
 

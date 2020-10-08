@@ -21,3 +21,12 @@
   margin: 1rem auto;
   display: block;
 }
+
+@media screen and (max-width: 600px) {
+  .quote-content h3 {
+    font-size: 1.55rem;
+  }
+  .quote-btn {
+    transform: scale(0.8);
+  }
+}

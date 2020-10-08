@@ -10,15 +10,24 @@
 
 .serial-num {
   border: 0.3rem solid rgb(255, 196, 0);
-  padding: 0.4rem 1.5rem;
+  padding: 0.4rem 0;
   font-weight: 700;
   font-size: 1.5rem;
   margin: 0 1rem;
-  /* width: 200px; */
+  width: 60px;
+  height: 60px;
+  display: block;
+  text-align: center;
 }
 
 .service-content {
   display: flex;
+  padding: 0.5rem;
+  /* margin: auto; */
+}
+
+.service-content h4 {
+  margin: auto 0;
 }
 
 .service-heading-container {
@@ -27,4 +36,17 @@
   justify-content: center;
   width: 100%;
   min-height: 300px;
+}
+
+@media screen and (max-width: 600px) {
+  .serial-num {
+    font-size: 1.25rem;
+    padding: 0.1rem 0;
+    height: 45px;
+    width: 45px;
+  }
+
+  .service-content h4 {
+    font-size: 1.25rem;
+  }
 }

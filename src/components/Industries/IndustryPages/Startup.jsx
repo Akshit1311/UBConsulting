@@ -119,8 +119,7 @@ function Startup() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Startup</h1>
-      <br />
+      <h1 className="text-center serv-heading">Startup</h1>
       <br />
       <ServiceWidget service={startup} />
 

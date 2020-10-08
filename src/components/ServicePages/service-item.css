@@ -10,3 +10,12 @@
   color: white;
   width: 100%;
 }
+
+@media screen and (max-width: 600px) {
+  .serv-heading {
+    font-size: 1.75rem;
+  }
+  .service-item {
+    padding: 2.5rem 0;
+  }
+}

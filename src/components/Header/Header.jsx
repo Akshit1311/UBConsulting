@@ -23,7 +23,17 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Logo from "../../images/logos/logo.png";
 
 function Header() {
-  const [showNav, setShowNav] = useState(true);
+  let mobView;
+
+  if (window.innerWidth < 600) {
+    mobView = false;
+  } else {
+    mobView = true;
+  }
+
+  const [showNav, setShowNav] = useState(mobView);
+
+  // console.log(window.innerWidth);
 
   function toggleNav() {
     setShowNav(!showNav);
@@ -61,11 +71,11 @@ function Header() {
               <Link className="h-link" to="/about">
                 ABOUT UBC
               </Link>
-              {/* <Link className="h-link" to="/services">
+              <Link className="h-link droppy-mob" to="/services">
                 SERVICES
-              </Link> */}
+              </Link>
 
-              <Dropdown>
+              <Dropdown className="droppy-desk">
                 <Dropdown.Toggle variant="" id="dropdown-basic">
                   {/* Dropdown Button */}
                   <span className="h-link" to="/services">
@@ -74,6 +84,22 @@ function Header() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="dropdown-con">
+                  <Dropdown.Item href="#">
+                    <Link
+                      className="text-white drop-text"
+                      to="/services/governance"
+                    >
+                      GRC
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                    <Link
+                      className="text-white drop-text"
+                      to="/services/startup"
+                    >
+                      Startup
+                    </Link>
+                  </Dropdown.Item>
                   <Dropdown.Item href="#">
                     <Link
                       className="text-white drop-text"
@@ -90,14 +116,7 @@ function Header() {
                       Assurance
                     </Link>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#">
-                    <Link
-                      className="text-white drop-text"
-                      to="/services/governance"
-                    >
-                      GRC
-                    </Link>
-                  </Dropdown.Item>
+
                   <Dropdown.Item href="#">
                     <Link className="text-white drop-text" to="/services/tax">
                       Tax
@@ -133,31 +152,6 @@ function Header() {
                       Loan Staffing
                     </Link>
                   </Dropdown.Item>
-                  {/* <Dropdown.Item href="#">
-                    <Link
-                      className="text-white drop-text"
-                      to="/services/outsourcing"
-                    >
-                      Outsourcing
-                    </Link>
-                  </Dropdown.Item> */}
-                  <Dropdown.Item href="#">
-                    <Link
-                      className="text-white drop-text"
-                      to="/services/startup"
-                    >
-                      Startup
-                    </Link>
-                  </Dropdown.Item>
-                  {/* s */}
-                  {/* <Dropdown.Item href="#">
-                    <Link
-                      className="text-white drop-text"
-                      to="/services/advisory"
-                    >
-                      Other Services
-                    </Link>
-                  </Dropdown.Item> */}
                 </Dropdown.Menu>
               </Dropdown>
 

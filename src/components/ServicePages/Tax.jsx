@@ -11,7 +11,7 @@ function Tax() {
     },
     {
       id: 2,
-      heading: "Advisory on GSTent",
+      heading: "Advisory on GST",
     },
     {
       id: 3,
@@ -25,8 +25,8 @@ function Tax() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Tax</h1>
-      <br />
+      <h1 className="text-center serv-heading">Tax</h1>
+      {/* <br /> */}
       <ServiceWidget service={tax} />
     </div>
   );

@@ -3,8 +3,10 @@
 }
 .section-heading {
   border: 0.4rem solid rgb(255, 196, 3);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   text-align: justify;
+  width: 90%;
+  margin: 1rem auto;
 }
 
 .section-heading span {
@@ -21,4 +23,14 @@
   font-weight: 700;
   padding: 0.5rem 3rem;
   text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+  .section-desc span {
+    padding: 1rem 0.75rem;
+  }
+
+  .section-heading {
+    font-size: 2.15rem;
+  }
 }

@@ -28,7 +28,7 @@ capabilities of solving complex challenges of the clients."
       <div id="about">
         <Container fluid>
           <Row>
-            <Col sm={12} lg={6}>
+            <Col sm={12} lg={7}>
               <div className="about-content">
                 <h3>WHO WE ARE</h3>
                 <br />
@@ -54,7 +54,7 @@ capabilities of solving complex challenges of the clients."
                 </p>
               </div>
             </Col>
-            <Col sm={12} lg={6}>
+            <Col sm={12} lg={5}>
               <div className="about-img"></div>
             </Col>
           </Row>

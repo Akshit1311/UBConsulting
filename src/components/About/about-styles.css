@@ -13,7 +13,7 @@
 
 @media screen and (min-width: 600px) {
   .about-content {
-    padding: 5rem 10rem;
+    padding: 5rem 6rem;
   }
 }
 
@@ -22,7 +22,7 @@
   border-left: 0.3rem solid rgb(255, 187, 0);
   border-bottom: 0.3rem solid rgb(255, 187, 0);
   padding: 0.5rem 2rem;
-  width: 70%;
+  width: 100%;
   font-weight: 700;
 }
 
@@ -39,4 +39,13 @@ body {
   background: rgb(22, 22, 22);
   /* margin: 5rem 0; */
   padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .about-content p {
+    font-size: 0.8rem;
+  }
+  .about-content h3 {
+    font-size: 1.5rem;
+  }
 }

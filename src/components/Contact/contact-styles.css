@@ -11,17 +11,6 @@
   font-weight: 700;
 }
 
-@media screen and (min-width: 600px) {
-  .contact-box {
-    width: 70%;
-    animation: effect 5s infinite;
-  }
-
-  .contact-box-container {
-    padding: 0 10rem;
-  }
-}
-
 .contact-heading {
   font-weight: 700;
 }
@@ -50,5 +39,31 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+.address {
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 600px) {
+  .contact-box {
+    width: 70%;
+    animation: effect 5s infinite;
+  }
+
+  .contact-box-container {
+    padding: 0 10rem;
+  }
+
+  .address {
+    border-right: 1px solid gray;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-heading {
+    font-size: 1.5rem;
   }
 }

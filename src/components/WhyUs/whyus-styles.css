@@ -1,13 +1,24 @@
 .reasons {
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 
 .section-desc h1 {
   text-align: center;
 }
 
+.why-heading {
+  width: 80%;
+  margin: 0 auto !important;
+  display: block;
+}
+
 @media screen and (max-width: 600px) {
   .section-desc h1 {
     margin-top: 3rem;
+    font-size: 2rem;
+  }
+
+  .why-heading {
+    width: 60%;
   }
 }

@@ -13,58 +13,108 @@ import "../Contact/contact-styles.css";
 import "./career-styles.css";
 
 // Email JS
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
+
+// Axios
+import axios from "axios";
 
 function Career() {
   const [form, setForm] = useState({
-    fname: "",
-    lname: "",
+    Fname: "",
+    Lname: "",
     city: "",
     country: "",
-    phone: "",
     email: "",
-    message: "",
+    myFile: {},
   });
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  const [fileName, setFileName] = useState("File Name");
 
-    setForm({
+  const handleChange = (event) => {
+    const { name, value, files } = event.target;
+    // if (name === "myFile") {
+    //   console.log(files[0]);
+    let file;
+    if (name === "myFile") {
+      setFileName(files[0].name);
+      file = files[0];
+    }
+
+    //   setForm({
+    //     ...form,
+    //     myFile: files[0],
+    //   });
+    // }
+
+    // console.log(file);
+    let formdata = {
       ...form,
-      [name]: value,
-    });
+      [name]: name === "myFile" ? file : value,
+    };
+    setForm(formdata);
+    // console.log(formdata);
+    // setTimeout(() => {
+    // }, 1000);
   };
 
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
+    event.preventDefault();
     if (form.checkValidity() === false) {
-      event.preventDefault();
       event.stopPropagation();
     } else {
       sendEmail();
-      event.preventDefault();
-      alert("Your application has been sent!");
+      // alert("Your application has been sent!");
     }
 
     setValidated(true);
+
+    console.log(event);
   };
 
-  const sendEmail = () => {
-    const templateId = "application";
-    const templateParams = form;
+  // const sendEmail = () => {
+  //   const templateId = "application";
+  //   const templateParams = form;
 
-    emailjs
-      .send("gmail", templateId, templateParams, "user_3M6dBzMyG5xfYAuyGQnT9")
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
+  //   emailjs
+  //     .send("gmail", templateId, templateParams, "user_3M6dBzMyG5xfYAuyGQnT9")
+  //     .then(
+  //       (response) => {
+  //         console.log("SUCCESS!", response.status, response.text);
+  //       },
+  //       (err) => {
+  //         console.log("FAILED...", err);
+  //       }
+  //     );
+  // };
+  const sendEmail = () => {
+    // console.log(form);
+    alert("Your email has been sent successfully!");
+
+    const bodyFormData = new FormData();
+
+    bodyFormData.set("Fname", form.Fname);
+    bodyFormData.set("Lname", form.Lname);
+    bodyFormData.set("city", form.city);
+    bodyFormData.set("country", form.country);
+    bodyFormData.set("email", form.email);
+    bodyFormData.set("myFile", form.myFile);
+
+    axios
+      .post("https://www.ubconsulting.in/api/Api/sendDetails/", bodyFormData, {
+        headers: {
+          // "Content-Type": "application/json",
+          "Content-Type": "multipart/form-data",
         },
-        (err) => {
-          console.log("FAILED...", err);
-        }
-      );
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -90,7 +140,7 @@ function Career() {
                     required
                     type="text"
                     placeholder="First name"
-                    name="fname"
+                    name="Fname"
                     onChange={handleChange}
                   />
                   <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -106,7 +156,7 @@ function Career() {
                     required
                     type="text"
                     placeholder="Last name"
-                    name="lname"
+                    name="Lname"
                     onChange={handleChange}
                   />
                   <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -154,8 +204,8 @@ function Career() {
                     <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                   </InputGroup.Prepend>
                   <Form.Control
-                    type="text"
-                    placeholder="Email"
+                    type="email"
+                    placeholder="abc@gmail.com"
                     aria-describedby="inputGroupPrepend"
                     name="email"
                     onChange={handleChange}
@@ -173,8 +223,11 @@ function Career() {
                 <Form.Label>CV Upload</Form.Label>
                 <Form.File
                   id="custom-file-translate-scss"
-                  label="Custom file input"
+                  label={fileName}
+                  name="myFile"
+                  type="file"
                   lang="en"
+                  onChange={handleChange}
                   custom
                 />
               </Form.Group>

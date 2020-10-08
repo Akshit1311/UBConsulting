@@ -18,9 +18,9 @@ const reasons = [
   },
   {
     id: 2,
-    heading: "Client first approach",
+    heading: '"Client first" approach',
     content:
-      "We put client’s needs &amp; interest first and\
+      "We put client’s needs & interests first and\
       focus on things which matters to you by deploying client centric teams",
   },
   {

@@ -111,14 +111,14 @@ function ItServices() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">IT Services</h1>
+      <h1 className="text-center serv-heading">IT Services</h1>
       <br />
       <Container>
         {/* <h2>IT Consultancy</h2> */}
         <br />
         <Row>
           <Col>
-            <h3 className="text-center">Advisory</h3>
+            <h3 className="text-center serv-heading">Advisory</h3>
             <br />
             <div className="mx-auto d-block">
               <ServiceWidget service={advisory} />
@@ -134,7 +134,7 @@ function ItServices() {
         <br />
         <Row>
           <Col>
-            <h3 className="text-center">
+            <h3 className="text-center serv-heading">
               Web and Mobile Application Development
             </h3>
             <br />
@@ -166,7 +166,7 @@ function ItServices() {
         <br />
         <Row>
           <Col>
-            <h3 className="text-center">Corporate Training</h3>
+            <h3 className="text-center serv-heading">Corporate Training</h3>
             <br />
             <div className="mx-auto d-block">
               <ServiceWidget service={corptrain} />

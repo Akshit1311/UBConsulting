@@ -3,10 +3,17 @@ footer {
   /* width: 100%; */
   background: black;
   color: white;
-  padding: 0.5rem 0;
+  padding: 0rem 0;
   width: 100%;
   /* position: absolute;
   bottom: 0; */
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    font-size: 0.75rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .f-link {

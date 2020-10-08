@@ -10,19 +10,22 @@ import Button from "react-bootstrap/Button";
 
 // Styles
 import "./contact-styles.css";
-// import "./background.css";
 
-// Email JS
-import emailjs from "emailjs-com";
+// Query
+import queries from "./queryType";
+
+// Axios
+import axios from "axios";
 
 function Contact() {
   const [form, setForm] = useState({
-    fname: "",
-    lname: "",
+    Fname: "",
+    Lname: "",
+    service: "GRC",
+    email: "",
     city: "",
     country: "",
     phone: "",
-    email: "",
     message: "",
   });
 
@@ -36,32 +39,45 @@ function Contact() {
   };
 
   const sendEmail = () => {
-    const templateId = "template_pj2Qwtal";
-    const templateParams = form;
+    // console.log(form);
+    alert("Your email has been sent successfully!");
 
-    emailjs
-      .send("gmail", templateId, templateParams, "user_3M6dBzMyG5xfYAuyGQnT9")
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
+    const bodyFormData = new FormData();
+
+    bodyFormData.set("Fname", form.Fname);
+    bodyFormData.set("Lname", form.Lname);
+    bodyFormData.set("email", form.email);
+    bodyFormData.set("city", form.city);
+    bodyFormData.set("country", form.country);
+    bodyFormData.set("message", form.message);
+    bodyFormData.set("phone", form.phone);
+    bodyFormData.set("service", form.service);
+
+    axios
+      .post("https://www.ubconsulting.in/api/Api/sendContact/", bodyFormData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
         },
-        (err) => {
-          console.log("FAILED...", err);
-        }
-      );
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
+    event.preventDefault();
     if (form.checkValidity() === false) {
-      event.preventDefault();
       event.stopPropagation();
     } else {
       sendEmail();
-      event.preventDefault();
-      alert("Your message has been sent!");
+      // event.preventDefault();
+      // alert("Your message has been sent!");
     }
 
     // event.preventDefault();
@@ -73,7 +89,37 @@ function Contact() {
     <div className="contact-box-container">
       <div className="contact-box">
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
-          <h1 className="contact-heading">For Enquiries . . .</h1>
+          {/* <h1 className="contact-heading">For Enquiries . . .</h1> */}
+          <div>
+            <Row>
+              <Col lg={4}>
+                <h1 className="contact-heading">Contact Us</h1>
+              </Col>
+              <Col lg={4}>
+                <div className="address">
+                  <i className="fa fa-address-card-o " aria-hidden="true"></i>
+                  <br />
+                  <span>
+                    Emaar Plaza, Golf Course ext. Road, Sector 65, Gurgaon
+                  </span>
+                </div>
+              </Col>
+              <Col>
+                <i className="fa fa-envelope " aria-hidden="true"></i>
+                &nbsp;&nbsp;
+                <span>info@ubconsulting.in</span>
+                <br />
+                <span>
+                  <i className="fa fa-phone " aria-hidden="true"></i>
+                  &nbsp;&nbsp; 0124 4246471
+                  <br />
+                  <i className="fa fa-phone " aria-hidden="true"></i>
+                  &nbsp;&nbsp; +91 9313 489 918
+                </span>
+              </Col>
+            </Row>
+          </div>
+
           <hr />
 
           <br />
@@ -92,7 +138,7 @@ function Contact() {
                     required
                     type="text"
                     placeholder="First name"
-                    name="fname"
+                    name="Fname"
                     onChange={handleChange}
                     defaultValue={form.fname}
                   />
@@ -109,7 +155,7 @@ function Contact() {
                     required
                     type="text"
                     placeholder="Last name"
-                    name="lname"
+                    name="Lname"
                     onChange={handleChange}
                     // defaultValue="Otto"
                   />
@@ -153,8 +199,8 @@ function Contact() {
                   <Form.Label>Phone Number</Form.Label>
                   <InputGroup>
                     <Form.Control
-                      type="text"
-                      placeholder="PhoneNumber"
+                      type="number"
+                      placeholder="9999912345"
                       aria-describedby="inputGroupPrepend"
                       name="phone"
                       onChange={handleChange}
@@ -176,8 +222,8 @@ function Contact() {
                     <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                   </InputGroup.Prepend>
                   <Form.Control
-                    type="text"
-                    placeholder="Email"
+                    type="email"
+                    placeholder="abc@gmail.com"
                     aria-describedby="inputGroupPrepend"
                     name="email"
                     onChange={handleChange}
@@ -188,12 +234,30 @@ function Contact() {
                   </Form.Control.Feedback>
                 </InputGroup>
               </Form.Group>
+              <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
+                <Form.Label>Query Type</Form.Label>
+                <Form.Control
+                  name="service"
+                  onChange={handleChange}
+                  as="select"
+                >
+                  {queries.map((query) => {
+                    return <option key={query.id}>{query.data}</option>;
+                  })}
 
+                  {/* <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option> */}
+                </Form.Control>
+              </Form.Group>
               <Form.Group as={Col} md="12" controlId="validationCustom03">
                 <Form.Label>Message</Form.Label>
                 <Form.Control
                   as="textarea"
                   aria-label="With textarea"
+                  placeholder="Type Your Message here ..."
                   name="message"
                   onChange={handleChange}
                 />

@@ -8,7 +8,7 @@ function Business() {
 
   return (
     <div className="service-item">
-      <h1 className="text-center">Business</h1>
+      <h1 className="text-center serv-heading">Business</h1>
       <br />
 
       <ServiceWidget service={business} />

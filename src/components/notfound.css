@@ -10,6 +10,10 @@
   flex-direction: column;
 }
 
+.not-found-img {
+  width: 500px;
+}
+
 .not-found-box {
   height: 400px;
   width: 600px;
@@ -37,4 +41,20 @@
 }
 .not-found-box h4 {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .not-found-img {
+    width: 100%;
+  }
+  .not-found-outer {
+    width: 100%;
+    padding: 0.5;
+  }
+  .not-found-box {
+    width: 100%;
+  }
+  .not-found-container {
+    padding: 0rem 0rem;
+  }
 }

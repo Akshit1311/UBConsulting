@@ -40,7 +40,6 @@ function Contact() {
 
   const sendEmail = () => {
     // console.log(form);
-    alert("Your email has been sent successfully!");
 
     const bodyFormData = new FormData();
 
@@ -60,10 +59,11 @@ function Contact() {
         },
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
+        alert("Your email has been sent successfully!");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log({ error });
       });
   };
 
@@ -92,16 +92,14 @@ function Contact() {
           {/* <h1 className="contact-heading">For Enquiries . . .</h1> */}
           <div>
             <Row>
-              <Col lg={4}>
-                <h1 className="contact-heading">Contact Us</h1>
+              <Col lg={3}>
+                <h2 className="contact-heading">Contact Us</h2>
               </Col>
-              <Col lg={4}>
+              <Col lg={5}>
                 <div className="address">
                   <i className="fa fa-address-card-o " aria-hidden="true"></i>
                   <br />
-                  <span>
-                    Emaar Plaza, Golf Course ext. Road, Sector 65, Gurgaon
-                  </span>
+                  <span>{process.env.REACT_APP_ADDRESS}</span>
                 </div>
               </Col>
               <Col>
@@ -111,10 +109,7 @@ function Contact() {
                 <br />
                 <span>
                   <i className="fa fa-phone " aria-hidden="true"></i>
-                  &nbsp;&nbsp; 0124 4246471
-                  <br />
-                  <i className="fa fa-phone " aria-hidden="true"></i>
-                  &nbsp;&nbsp; +91 9313 489 918
+                  &nbsp;&nbsp; {process.env.REACT_APP_PHONE_NUM}
                 </span>
               </Col>
             </Row>

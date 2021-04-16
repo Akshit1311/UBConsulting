@@ -7,12 +7,15 @@
   border-radius: 1rem;
   padding: 3rem;
   /* border: 1px solid rgba(128, 128, 128, 0.726); */
-  box-shadow: 0 0 50px 1px dodgerblue;
+  box-shadow: 0 0 40px 1px rgba(30, 143, 255, 0.703);
   font-weight: 700;
 }
 
 .contact-heading {
   font-weight: 700;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .contact-box-container {

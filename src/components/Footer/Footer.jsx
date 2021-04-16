@@ -44,7 +44,7 @@ function Footer() {
               <Col className="text-center">
                 <a className="f-link-1" href={"tel:" + phone}>
                   <PhoneIcon />
-                  &nbsp;+91 9313 489 918
+                  &nbsp;{process.env.REACT_APP_PHONE_NUM}
                 </a>
               </Col>
             </Row>

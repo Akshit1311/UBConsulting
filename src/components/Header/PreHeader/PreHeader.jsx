@@ -18,7 +18,7 @@ function PreHeader() {
         <Row>
           <Col lg={6} className="text-center">
             <PhoneIcon />
-            &nbsp;&nbsp;+91 9313489918
+            &nbsp;&nbsp;{process.env.REACT_APP_PHONE_NUM}
           </Col>
           <Col lg={6} className="text-center">
             <EmailIcon />
